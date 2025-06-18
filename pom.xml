@@ -1,0 +1,149 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.geotools</groupId>
+  <artifactId>tutorial</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>tutorial</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <geotools.version>33-SNAPSHOT</geotools.version>
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-referencing</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-shapefile</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-swing</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-epsg-hsql</artifactId>
+      <version>33-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-api</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+      <dependency>
+          <groupId>org.geotools</groupId>
+          <artifactId>gt-main</artifactId>
+          <version>${geotools.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.geotools</groupId>
+          <artifactId>gt-geotiff</artifactId>
+          <version>${geotools.version}</version>
+      </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-image</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-render</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-wms</artifactId>
+      <version>${geotools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-data</artifactId>
+      <version>26.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-sld</artifactId>
+      <version>27.2</version>
+    </dependency>
+
+<!--    <dependency>-->
+<!--      <groupId>org.geotools</groupId>-->
+<!--      <artifactId>gt-coverage</artifactId>-->
+<!--      <version>32.0</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.geotools</groupId>-->
+<!--      <artifactId>gt-opengis</artifactId>-->
+<!--      <version>29.4</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.opengis</groupId>-->
+<!--      <artifactId>geoapi</artifactId>-->
+<!--      <version>3.0.1</version> &lt;!&ndash; Compatible version with GeoTools &ndash;&gt;-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.geotools</groupId>-->
+<!--      <artifactId>gt-render</artifactId>-->
+<!--      <version>${geotools.version}</version>-->
+<!--    </dependency>-->
+<!--      <dependency>-->
+<!--          <groupId>com.twelvemonkeys.imageio</groupId>-->
+<!--          <artifactId>imageio-jpeg</artifactId>-->
+<!--          <version>3.12.0</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--          <groupId>com.twelvemonkeys.imageio</groupId>-->
+<!--          <artifactId>imageio-tiff</artifactId>-->
+<!--          <version>3.12.0</version>-->
+<!--      </dependency>-->
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>osgeo</id>
+      <name>OSGeo Release Repository</name>
+      <url>https://repo.osgeo.org/repository/release/</url>
+      <snapshots><enabled>false</enabled></snapshots>
+      <releases><enabled>true</enabled></releases>
+    </repository>
+    <repository>
+      <id>osgeo-snapshot</id>
+      <name>OSGeo Snapshot Repository</name>
+      <url>https://repo.osgeo.org/repository/snapshot/</url>
+      <snapshots><enabled>true</enabled></snapshots>
+      <releases><enabled>false</enabled></releases>
+    </repository>
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>9</source>
+          <target>9</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
+
